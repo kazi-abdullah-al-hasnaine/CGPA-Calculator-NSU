@@ -104,24 +104,19 @@
             align-items: center;
             justify-content: space-between;
             margin-bottom: 12px;
-            gap: 10px;
+            gap: 6px;
             animation: fadeIn 0.3s ease-in;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
         }
         
         @media (max-width: 600px) {
             .course {
-                gap: 8px;
+                gap: 4px;
             }
             
-            .course input.course-name {
-                flex: 1 1 100%;
-                margin-bottom: 8px;
-            }
-            
-            .course select {
-                flex: 1;
-                min-width: 0;
+            .course input, .course select, .course button {
+                padding: 8px;
+                font-size: 14px;
             }
         }
 
@@ -145,8 +140,31 @@
         }
         
         .course select {
-            flex: 1;
-            min-width: 80px;
+            flex: 0.8;
+            min-width: 60px;
+        }
+        
+        .course button {
+            width: 36px;
+            padding: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 16px;
+            }
+            
+            .course input.course-name {
+                flex: 1.2;
+            }
+            
+            .course select {
+                flex: 0.6;
+                min-width: 50px;
+            }
         }
 
         .course input:focus, .course select:focus {
